@@ -106,6 +106,7 @@ RUN python3 -m pip install --no-cache-dir jupyter_http_over_ws ipykernel==5.1.1 
 RUN jupyter serverextension enable --py jupyter_http_over_ws
 
 RUN mkdir /notebooks && chmod a+rwx /notebooks
+RUN mkdir /datasets && chmod a+rwx /datasets
 RUN mkdir /.local && chmod a+rwx /.local
 
 RUN apt-get update && apt-get install -y --no-install-recommends wget git

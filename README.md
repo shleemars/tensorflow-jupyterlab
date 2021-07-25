@@ -7,7 +7,7 @@ $ docker build -f ./Dockerfile -t tf-gpu-jupyterlab .
 
 ## Running docker
 ```shell
-$ docker run --rm --gpus all -p 8888:8888 -v $(realpath ~/notebooks):/notebooks tf-gpu-jupyterlab
+$ docker run --rm --gpus all -p 8888:8888 -v $(realpath ~/notebooks):/notebooks -v $(realpath /datasets):/datasets tf-gpu-jupyterlab
 ```
 
 ## Running with docker-composer
