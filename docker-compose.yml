@@ -1,0 +1,11 @@
+version: "2.3"
+
+services:
+  jupyterlab:
+    image: tf-gpu-jupyterlab
+    runtime: nvidia
+    ports:
+      - "8888:8888"
+    volumes:
+      - /home/shlee/notebooks:/notebooks
+    
