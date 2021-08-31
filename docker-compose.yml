@@ -2,10 +2,11 @@ version: "2.3"
 
 services:
   jupyterlab:
-    image: tf-gpu-jupyterlab
+    image: tensorflow-jupyterlab
     runtime: nvidia
+    ipc: host
     ports:
       - "8888:8888"
     volumes:
-      - /home/shlee/notebooks:/notebooks
-      - /dataset2:/datasets    
+      - /home/shlee/notebook:/notebook
+      - /dataset:/dataset    
